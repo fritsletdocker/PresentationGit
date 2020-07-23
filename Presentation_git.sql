@@ -1,13 +1,11 @@
 --- MEP v1.0
 -- Fritslet 
+-- Modifs Affoua
 SET NOCOUNT ON
 GO
 
 USE master
 GO
-if exists (select * from sysdatabases where name='Northwind_db')
-		drop database Northwind_db
-go
 
 DECLARE @device_directory NVARCHAR(520)
 SELECT @device_directory = SUBSTRING(filename, 1, CHARINDEX(N'master.mdf', LOWER(filename)) - 1)
